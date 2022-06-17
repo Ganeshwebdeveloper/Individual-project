@@ -1,0 +1,649 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+   <link rel="stylesheet" href="bestseller.css">
+   <style>
+    *{
+            margin: 0PX;
+            padding: 0px;
+            font-family: "BBText Regular", Arial, Helvetica, sans-serif;
+        }
+        body {
+            padding: 2%;
+            padding-top: 0%;
+        }
+        .sidebar {
+            height: 100%;
+            width: 0;
+            position: fixed;
+            z-index: 1;
+            top: 0;
+            left: 0;
+            background-color: #221F20;
+            overflow-x: hidden;
+            color: rgb(170, 170, 170);
+        }
+        #navbar {
+            height: 55px;
+            width: 100%;
+            padding-top: 29px;
+            font-size: 17px;
+            font-weight: 500;
+            display: grid;
+            grid-template-columns: 15% 15% 20%;
+            justify-content: space-between;
+            position: relative;
+        }
+        #navbar>div>p {
+            display: inline;
+            margin-left: 8%;
+        }
+        #navbar>div>p:hover {
+            cursor:pointer;
+            text-decoration: underline rgba(0, 0, 0, 0.547);
+            
+        }
+        #navbar img {
+            margin-top: -10PX;
+            width: 100%;
+        }
+        #header {
+            display: flex;
+            justify-content: space-between;
+            padding-top: 29px;
+            padding-left: 50px;
+            padding-right: 30px;
+            font-size: 18px;
+            font-weight: 500;
+        }
+        #header p {
+            display: inline;
+            margin-right: 20px;
+        }
+        #header p:hover {
+            cursor: pointer;
+            color: white;
+            text-decoration: underline white;
+        }
+        .closesidebar {
+            margin-top: -5px;
+            font-size: 29px;
+        }
+        #part1 {
+            width: 100%;
+            margin-top: 100px;
+            padding-left: 50px;
+        }
+        #part1>h2 {
+            margin-top: 2px; 
+        }
+        #searchbar {
+            width: 85%;
+            background-color: #221F20;
+            border: 0px;
+            border-bottom: 1px solid rgb(170, 170, 170);
+            font-size: 24px;
+            margin-bottom: 15px;
+            padding-bottom: 7px;
+            color: white;
+        }
+        #searchbar:focus{
+            outline: none;
+        }
+        #part1>h3 {
+            margin-top: 10px;
+            font-weight: 500;
+            font-size: 19px;
+            color: white;
+        }
+        #part1>p {
+            font-size: 17px;
+            color: white;
+        }
+        #part2>p {
+            color: white;
+        }
+        #searchNavbar p {
+            color: rgb(184, 179, 179);
+        }
+        #part1>h2, #part2>h2 {
+            font-size: 22px;
+            font-weight: 500; 
+            margin-top: 5px;
+        }
+        #part1> p+h2, #part2> p+h2 {
+            margin-top: 15px;
+        }
+        #part2 {
+            margin-top: 29px;
+            padding-left: 50px;
+        }
+        #footer {
+            padding-left: 50px;
+            margin-block-end: 50px;
+            position:absolute;
+            bottom: 0px;
+            color: white;
+        }
+        #footer>p {
+            margin-bottom: 7px;
+        }
+        #signinnavbar {
+            width: 0%;
+            padding :3%;
+            
+        }
+        #signinnavbar input, #reg button {
+            width: 100%;
+            height: 40px;
+
+        }
+        #reg {
+            padding: 3%;
+            background-color: black;
+            color: white;
+        }
+        #reg button {
+            width: 100%;background-color: white;
+            color: black;
+        }
+        #fullnavbar {
+            overflow: hidden;
+            position: fixed;
+            top: 0;
+            background-color: white;
+            width: 100%;
+        }
+
+        /* footer part */
+        * {
+            margin: 0px;
+            padding: 0px;
+            font-family: "BBText Regular", Arial, Helvetica, sans-serif;
+        }
+        #fullfooter {
+            
+            height: 500px;
+            width: 100%;
+            background-color: rgb(0, 0, 0);
+            color: white;
+        }
+        #footerpart1 {
+            padding: 2%;
+            display: flex;
+            justify-content: space-around;
+            border-bottom: 1px solid white;
+        }
+        #fullfooter input, button {
+              width: 70%;
+              display: block;
+              margin-top: 15px;
+              height: 37px;
+              color: white;
+              background-color: black;
+              border: 1px solid white;
+              padding-left: 14px;
+        }
+        #fullfooter button {
+            width: 30%;
+            margin-top: 30px;
+        }
+        #fullfooter button:hover {
+            cursor: pointer;
+        }
+        #footerpart1>div {
+            width: 26%;
+        }
+        #footerpart1 p {
+            margin-top: 15px;
+        }
+        #fullfooter p:hover {
+            cursor: pointer;
+        }
+        #footerpart2 {
+            height: 200px;
+            width: 100%;
+            padding: 3%;
+            display: grid;
+            grid-template-columns: 50% 20% 30%;
+            color: rgb(194, 194, 194);
+        }
+        #social {
+  font-size: 35px;
+  display: flex;
+}
+
+#social > div {
+  margin: 20px;
+}
+
+
+   </style>
+</head>
+<body>
+      <!-- navbar part starts -->
+      <div id="fullnavbar">
+   
+        <!-- shopnav sidebar part start -->
+        <div id="shopNavbar" class="sidebar">
+        
+           <div id="header">
+               <div>
+                   <p onclick="shopNavbarFunc()" class="shop1" >Shop</p>
+               <p onclick="learnNavbarFunc()">Learn</p>
+               <p onclick="searchNavbarFunc()">Search</p>
+               </div>
+               <div  class="closesidebar">
+                   <p onclick="closeFunc()">&times;</p>
+               </div>
+           </div>
+   
+        <div id="part1">
+           <p>trending</p>
+           <h2>NEW</h2>
+           <h2>BESTSELLERS</h2>
+           <h2>VIRTUAL SERVICES</h2>
+           <h2>SPECIAL OFFERS</h2>
+        </div>
+   
+        <div id="part2">
+           <p>shopby</p>
+           <h2>MAKEUP</h2>
+           <h2>SKINCARE</h2>
+           <h2>MINI BAR</h2>
+           <h2>GIFTS & SETS</h2>
+        </div>
+   
+        <div id="footer">
+           <p>Join BB Access and earn points</p>
+           <p> Find a store</p>
+        </div>
+       </div> 
+       <!-- shopnav sidebar part ends -->
+   
+         <!-- learnNavbar sidebar start -->
+         <div id="learnNavbar" class="sidebar">
+        
+           <div id="header">
+               <div>
+                   <p onclick="shopNavbarFunc()">Shop</p>
+               <p onclick="learnNavbarFunc()" class="learn1">Learn</p>
+               <p onclick="searchNavbarFunc()">Search</p>
+               </div>
+               <div  class="closesidebar">
+                   <p onclick="closeFunc()">&times;</p>
+               </div>
+           </div>
+   
+        <div id="part1">
+           <p>Always-On Artistry</p>
+          <h2>OUR ARTISTS</h2>
+          <h2>VIRTUAL SERVICES</h2>
+          <h2>HOW TO VIDEOS</h2>
+        </div>
+   
+        <div id="part2">
+           <p>Our Brand</p>
+           <h2>INGREDIENTS</h2>
+           <h2>SUSTAINABILITY</h2>
+           <h2>PRETTY POWERFUL FUND</h2>
+           <h2>CARBON NEUTRAL SHIPPING</h2>
+           <h2>OUR STORY</h2>
+        </div>
+   
+        <div id="footer">
+           <p>Join BB Access and earn points</p>
+           <p> Find a store</p>
+        </div>
+       </div> 
+       <!-- learnnav sidebar part ends -->
+   
+        <!-- searchNavbar sidebar start -->
+        <div id="searchNavbar" class="sidebar">
+        
+           <div id="header">
+               <div>
+                   <p onclick="shopNavbarFunc()" >Shop</p>
+               <p onclick="learnNavbarFunc()">Learn</p>
+               <p onclick="searchNavbarFunc()" class="search1">Search</p>
+               </div>
+               <div  class="closesidebar">
+                   <p onclick="closeFunc()">&times;</p>
+               </div>
+           </div>
+   
+        <div id="part1">
+           <input type="text" placeholder="Search" id="searchbar">
+           <p>suggested searches</p>
+          <h3>Foundation</h3>
+          <h3>Face wash</h3>
+          <h3>Offers</h3>
+        </div>
+   
+        
+   
+        <div id="footer">
+           <p>Join BB Access and earn points</p>
+           <p> Find a store</p>
+        </div>
+       </div> 
+       <!-- learnnav sidebar part ends -->
+       <script>
+           function closeFunc(){
+               document.getElementById("shopNavbar").style.width="0px"
+               document.getElementById("learnNavbar").style.width="0px"
+               document.getElementById("searchNavbar").style.width="0px"
+           }
+       </script>
+   
+       <!-- the navbar and Header part start -->
+       <div id="navbar">
+           <div>
+                <!-- shopNavbar java script start -->
+               <p onclick="shopNavbarFunc()" >Shop</p>
+               <script>
+                 function shopNavbarFunc(){
+                   document.getElementById("shopNavbar").style.width="0px"
+               document.getElementById("learnNavbar").style.width="0px"
+               document.getElementById("searchNavbar").style.width="0px"
+                   document.getElementById("shopNavbar").style.width= "26%";
+                   var shop1=document.querySelector(".shop1");
+                   shop1.style.color="white";
+                   shop1.style.textDecoration="underline";
+                   shop1.style.textDecorationColor="white";
+                 }
+               </script>
+               <!-- shopNavbar java script ends -->
+   
+               <!-- learnNavbar java script start -->
+               <p onclick="learnNavbarFunc()">Learn</p>
+                <script>
+                    function learnNavbarFunc(){
+                       document.getElementById("shopNavbar").style.width="0px"
+               document.getElementById("learnNavbar").style.width="0px"
+               document.getElementById("searchNavbar").style.width="0px"
+                   document.getElementById("learnNavbar").style.width= "26%";
+                   var shop1=document.querySelector(".learn1");
+                   shop1.style.color="white";
+                   shop1.style.textDecoration="underline";
+                   shop1.style.textDecorationColor="white";
+                 }
+                </script>
+                <!-- learnNavbar java script ends -->
+   
+                <!-- searchnavbar java script starts -->
+               <p onclick="searchNavbarFunc()">Search</p>
+               <script>
+                   function searchNavbarFunc(){
+                       document.getElementById("shopNavbar").style.width="0px"
+               document.getElementById("learnNavbar").style.width="0px"
+               document.getElementById("searchNavbar").style.width="0px"
+                  document.getElementById("searchNavbar").style.width= "45%";
+                  var shop1=document.querySelector(".search1");
+                   shop1.style.color="white";
+                   shop1.style.textDecoration="underline";
+                   shop1.style.textDecorationColor="white";
+                }
+               </script>
+               <!-- searchNavbar java script ends -->
+           </div>
+           <div>
+               <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRZIWO620BRJ_VmMzFmROFr-DXne8kuJkAAtzTEzLi-na36_bAZj1_FTGkq_ycvJTUfsw&usqp=CAU" alt="logo">
+           </div>
+           <div>
+               <p><a href="index.html">EmailSign Up</a></p>
+               <!-- <div id="signinnavbar">
+                   <p>Login</p>
+                   <form id="form">
+                       <input type="text" placeholder="*email Address" id="email">
+                       <input type="text" placeholder="*password" id="password">
+                       <p><u>forget your password?</u></p>
+                       <input type= "submit" id="sub" value="LOG IN">
+                   </form>
+                   <hr>
+                   <div id="reg">
+                       <p>Don't have an account?</p>
+                       <a href="index.html">
+                           <button>REGISTER</button>
+                       </a>
+                   </div>
+               </div> -->
+               <p id="signinNavbar"><a href="signin.html">Sign in</a></p>
+               <p>Bag (0)</p>
+           </div>
+       </div>
+       <!-- <script>
+           document.querySelector("#container").addEventListener("click",closeFunc);
+       </script> -->
+   
+      </div>  
+      <!-- navbar part ends -->
+    <div id="bestsellers">
+        <div>
+            <h1>BESTSELLERS</h1>
+        </div>
+
+        <div id="sortdiv">
+            <div>
+                <p><a href="homepage.html">home/</a> <a href="bestseller.html">bestsellers</a></p>
+            </div>
+            <div>25 products</div>
+        </div>
+        <hr>
+    
+        <div id="sort">Sort v</div>
+        <hr>
+        <div id="products">
+
+        </div>
+    </div>
+</body>
+<script>
+    
+    var data =[ {
+        "bgimg": "https://www.bobbibrowncosmetics.com/media/export/cms/products/600x600/bb_sku_EPGN01_600x600_1.jpg",
+        "image":"https://www.bobbibrowncosmetics.com/media/export/cms/products/v2_1080x1080/bb_sku_E96E51_1080x1080_0.jpg",
+        "name1" :"MoonStone New",
+        "name" : "LONG-WEAR CREAM SHADOW STICK",
+        "name2" : "Our ultimate quick eye shadow stick",
+        "price" : "30.00",
+        "anchor":"products.html"
+    },{
+        "bgimg": "https://www.bobbibrowncosmetics.com/media/export/cms/products/v2_1080x1080/bb_smoosh_EMCK07_1080x1080_0.jpg",
+        "image":"https://www.bobbibrowncosmetics.com/media/export/cms/products/v2_1080x1080/bb_sku_EMCK07_1080x1080_0.jpg",
+        "name1" :"Force of Nature",
+        "name" : "CRUSHED OIL-INFUSED GLOSS",
+        "name2" : "Hydrating, non-sticky lip gloss",
+        "price" : "29.00",
+        "anchor":"products.html"
+    },{
+        "bgimg": "https://www.bobbibrowncosmetics.com/media/export/cms/products/v2_1080x1080/bb_smoosh_ERMP01_1080x1080_0.jpg",
+        "image":"https://www.bobbibrowncosmetics.com/media/export/cms/products/v2_1080x1080/bb_sku_ERMP01_1080x1080_0.jpg",
+        "name1" :"Bare Pink",
+        "name" : "EXTRA LIP TINT",
+        "name2" : "Color-enhancing lip balm",
+        "price" : "34.00",
+        "anchor":"products.html"
+    },{
+        "bgimg": "https://www.bobbibrowncosmetics.com/media/export/cms/products/v2_1080x1080/bb_prod_7485_1080x1080_0.jpg",
+        "image":"https://www.bobbibrowncosmetics.com/media/export/cms/products/v2_1080x1080/bb_sku_E1LM01_1080x1080_0.jpg",
+        "name1" :"MoonStone New",
+        "name" : "VITAMIN ENRICHED FACE BASE",
+        "name2" : "Multitasking, moisturizing primer",
+        "price" : "64.00",
+        "anchor":"products.html"
+    },
+    {
+        "bgimg": "https://www.bobbibrowncosmetics.com/media/export/cms/products/v2_1080x1080/bb_smoosh_E0KK07_1080x1080_0.jpg",
+        "image":"https://www.bobbibrowncosmetics.com/media/export/cms/products/v2_1080x1080/bb_sku_E0KK07_1080x1080_0.jpg",
+        "name1" :"Espresion Ink",
+        "name" : "LONG-WEAR GEL EYELINER",
+        "name2" : "Waterproof, no-smudge eyeliner",
+        "price" : "30.00",
+        "anchor":"products.html"
+    },{
+        "bgimg": "https://www.bobbibrowncosmetics.com/media/export/cms/products/v2_1080x1080/bb_smoosh_EGXR04_1080x1080_0.jpg",
+        "image":"https://www.bobbibrowncosmetics.com/media/export/cms/products/v2_1080x1080/bb_sku_EGXR04_1080x1080_0.jpg",
+        "name1" :"Natural",
+        "name" : "CRUSHED OIL-INFUSED GLOSS",
+        "name2" : "16-hour, breathable, natural matte coverage",
+        "price" : "50.00",
+        "anchor":"products.html"
+    },{
+        "bgimg": "https://www.bobbibrowncosmetics.com/media/export/cms/products/v2_1080x1080/bb_smoosh_ERMP01_1080x1080_0.jpg",
+        "image":"https://www.bobbibrowncosmetics.com/media/export/cms/products/v2_1080x1080/bb_smoosh_EPXL09_1080x1080_0.jpg",
+        "name1" :"Bare Pink",
+        "name" : "SKIN CORRECTOR STICK",
+        "name2" : "Discoloration neutralizer for undereyes & face",
+        "price" : "32.00",
+        "anchor":"products.html"
+    },{
+        "bgimg": "https://www.bobbibrowncosmetics.com/media/export/cms/products/v2_1080x1080/bb_smoosh_ERFJ11_1080x1080_0.jpg",
+        "image":"https://www.bobbibrowncosmetics.com/media/export/cms/products/v2_1080x1080/bb_sku_ERFJ11_1080x1080_0.jpg",
+        "name1" :"Honey",
+        "name" : "SKIN CONCEALER STICK",
+        "name2" : "Easy-to-use, long-lasting concealer stick",
+        "price" : "64.00",
+        "anchor":"products.html"
+    }
+]  
+displayprod();
+function displayprod(){
+for(var a=0; a<data.length; a++){
+    var product = document.querySelector("#products");
+       var div = document.createElement("div");
+       div.id="div0";
+       if((a+1)%4 ==0 ){
+        div.style.borderRightColor="white";
+       }
+       var div1 = document.createElement("div");
+       var x = "bg"+a
+      div1.id= x;
+       var image = document.createElement("img");
+       image.id="img1"
+       image.src=data[a].image;
+       var name1 = document.createElement("p");
+       name1.innerText=data[a].name1;
+       var name0 = document.createElement("h3");
+       name0.innerText = data[a].name;
+       name0.id = "name"
+       var name2 = document.createElement("p");
+       name2.innerText=data[a].name2;
+       var price0 = document.createElement("p");
+       price0.innerText = "$"+data[a].price;
+       price0.id = "price";
+       var buy = document.createElement("button");
+       buy.innerText="Add to bag";
+       buy.id="bag";
+       var prod1 = document.createElement("a");
+   prod1.setAttribute("href",data[a].anchor)
+  
+       div1.append(image);
+       prod1.append(div1)
+       div.append(prod1,name1,name0,name2,price0,buy);
+       document.getElementById("products").append(div)
+   }
+}
+var submit = document.querySelectorAll("#bag");
+     submit.forEach(function(x){
+        x.addEventListener("click", function myfunc(){
+            myfunc6(event);
+        })
+       
+        function myfunc6(a) {
+            var name = a.target.parentNode.querySelector("#name").innerText;
+        var price = a.target.parentNode.querySelector("#price").innerText;
+        var image = a.target.parentNode.querySelector("#img1").src
+        var product_arr = JSON.parse(localStorage.getItem("product_array"))|| [];
+            var obj = {
+                product_name : name,
+                product_price : price,
+                product_img : image
+            }
+            console.log(obj)
+            product_arr.push(obj)
+            console.log(image)
+            localStorage.setItem("product_array",JSON.stringify(product_arr))
+            alert("This Item Has Been Added To Your Cart")
+        }
+     })
+      
+ 
+
+</script>
+
+ <!-- footer part -->
+
+ <div id="fullfooter">
+
+    <div id="footerpart1">
+        <div>
+            <h3>NEED HELP?</h3>
+            <P>Chat with an Artist</P>
+            <p>
+                Text an Artist
+            </p>
+            <p>
+                Call Us (877)-310-9222
+            </p>
+            <p>
+                Shipping & Returns
+            </p>
+            <p>
+                FAQS
+            </p>
+            <p>
+                Careers
+            </p>
+            <input type="text" placeholder="CHOOSE LOCATION">
+        </div>
+        <div>
+            <h3>MY BOBBI BROWN</h3>
+            <p>
+                BB Access
+            </p>
+            <p>
+                My Account
+            </p>
+            <p>My Orders</p>
+            <p>Store Locator</p>
+        </div>
+        <div>
+            <input type="text"placeholder="ENTER YOUR EMAIL"><input type="text"placeholder="ENTER YOUR MOBILE PHONE">
+            <button>SUBMIT</button>
+            <div id="social">
+                <div><a href="https://www.facebook.com/" target="_blank"><i
+                            class="fa-brands fa-facebook"></i></a></i></div>
+                <div><a href="https://twitter.com/i/flow/login" target="_blank"><i
+                            class="fa-brands fa-twitter"></i></a></div>
+                <div><a href="https://www.instagram.com/?hl=en" target="_blank"><i
+                            class="fa-brands fa-instagram-square"></i></a></div>
+                <div><a href="https://www.youtube.com/" target="_blank"><i class="fa-brands fa-youtube"></i></a>
+                </div>
+                <div><a href="https://in.pinterest.com/" target="_blank"><i class="fa-brands fa-pinterest"></i></a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="footerpart2">
+        <div>
+            © Bobbi Brown Professional Cosmetics, Inc. All worldwide rights reserved.
+        </div>
+        <div>
+            <p>Terms & conditions</p>
+            <p>California Do Not Sell My Personal Information</p>
+            <p>Accessibillity</p>
+        </div>
+        <div>
+            <p>Interest Based Ads</p>
+            <p>Privacy Policy</p>
+        </div>
+    </div>
+
+   </div>
+</html>

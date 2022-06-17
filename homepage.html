@@ -1,0 +1,689 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BOBBIBROWN/Homepage</title>
+    <link rel="stylesheet" href="homepage.css">
+    <style>
+        *{
+            margin: 0PX;
+            padding: 0px;
+            font-family: "BBText Regular", Arial, Helvetica, sans-serif;
+        }
+        body {
+            padding: 2%;
+            padding-top: 0%;
+        }
+        .sidebar {
+            height: 100%;
+            width: 0;
+            position: fixed;
+            z-index: 1;
+            top: 0;
+            left: 0;
+            background-color: #221F20;
+            overflow-x: hidden;
+            color: rgb(170, 170, 170);
+        }
+        #navbar a {
+            text-decoration: none;
+            color: black;
+        }
+        #navbar {
+            height: 55px;
+            width: 100%;
+            padding-top: 29px;
+            font-size: 17px;
+            font-weight: 500;
+            display: grid;
+            grid-template-columns: 15% 15% 20%;
+            justify-content: space-between;
+            position: relative;
+        }
+        #navbar>div>p {
+            display: inline;
+            margin-left: 8%;
+        }
+        #navbar>div>p:hover {
+            cursor:pointer;
+            text-decoration: underline rgba(0, 0, 0, 0.547);
+            
+        }
+        #navbar img {
+            margin-top: -10PX;
+            width: 100%;
+        }
+        #header {
+            display: flex;
+            justify-content: space-between;
+            padding-top: 29px;
+            padding-left: 50px;
+            padding-right: 30px;
+            font-size: 18px;
+            font-weight: 500;
+        }
+        #header p {
+            display: inline;
+            margin-right: 20px;
+        }
+        #header p:hover {
+            cursor: pointer;
+            color: white;
+            text-decoration: underline white;
+        }
+        .closesidebar {
+            margin-top: -5px;
+            font-size: 29px;
+        }
+        #part1 {
+            width: 100%;
+            margin-top: 100px;
+            padding-left: 50px;
+        }
+        #part1 a {
+            text-decoration: none;
+            color:rgb(191, 189, 189) ;
+        }
+        #part1>h2 {
+            margin-top: 2px; 
+        }
+        #searchbar {
+            width: 85%;
+            background-color: #221F20;
+            border: 0px;
+            border-bottom: 1px solid rgb(170, 170, 170);
+            font-size: 24px;
+            margin-bottom: 15px;
+            padding-bottom: 7px;
+            color: white;
+        }
+        #searchbar:focus{
+            outline: none;
+        }
+        #part1>h3 {
+            margin-top: 10px;
+            font-weight: 500;
+            font-size: 19px;
+            color: white;
+        }
+        #part1>p {
+            font-size: 17px;
+            color: white;
+        }
+        #part2>p {
+            color: white;
+        }
+        #searchNavbar p {
+            color: rgb(184, 179, 179);
+        }
+        #part1>h2, #part2>h2 {
+            font-size: 22px;
+            font-weight: 500; 
+            margin-top: 5px;
+        }
+        #part1> p+h2, #part2> p+h2 {
+            margin-top: 15px;
+        }
+        #part2 {
+            margin-top: 29px;
+            padding-left: 50px;
+        }
+        #footer {
+            padding-left: 50px;
+            margin-block-end: 50px;
+            position:absolute;
+            bottom: 0px;
+            color: white;
+        }
+        #footer>p {
+            margin-bottom: 7px;
+        }
+        #signinnavbar {
+            width: 0%;
+            padding :3%;
+            
+        }
+        #signinnavbar input, #reg button {
+            width: 100%;
+            height: 40px;
+
+        }
+        #reg {
+            padding: 3%;
+            background-color: black;
+            color: white;
+        }
+        #reg button {
+            width: 100%;background-color: white;
+            color: black;
+        }
+        #fullnavbar {
+            overflow: hidden;
+            position: fixed;
+            top: 0;
+            background-color: white;
+            width: 100%;
+        }
+       
+        /* footer part */
+        * {
+            margin: 0px;
+            padding: 0px;
+            font-family: "BBText Regular", Arial, Helvetica, sans-serif;
+        }
+        #fullfooter {
+            
+            height: 500px;
+            width: 100%;
+            background-color: rgb(0, 0, 0);
+            color: white;
+        }
+        #footerpart1 {
+            padding: 2%;
+            display: flex;
+            justify-content: space-around;
+            border-bottom: 1px solid white;
+        }
+        #fullfooter input, button {
+              width: 70%;
+              display: block;
+              margin-top: 15px;
+              height: 37px;
+              color: white;
+              background-color: black;
+              border: 1px solid white;
+              padding-left: 14px;
+        }
+        #fullfooter button {
+            width: 30%;
+            margin-top: 30px;
+        }
+        #fullfooter button:hover {
+            cursor: pointer;
+        }
+        #footerpart1>div {
+            width: 26%;
+        }
+        #footerpart1 p {
+            margin-top: 15px;
+        }
+        #fullfooter p:hover {
+            cursor: pointer;
+        }
+        #footerpart2 {
+            height: 200px;
+            width: 100%;
+            padding: 3%;
+            display: grid;
+            grid-template-columns: 50% 20% 30%;
+            color: rgb(194, 194, 194);
+        }
+        #social {
+  font-size: 35px;
+  display: flex;
+}
+
+#social > div {
+  margin: 20px;
+}
+#container {
+    padding-bottom: 500px;
+}
+
+    
+
+    </style>
+</head>
+<body>
+
+       <!-- navbar part starts -->
+       <div id="fullnavbar">
+   
+        <!-- shopnav sidebar part start -->
+        <div id="shopNavbar" class="sidebar">
+        
+           <div id="header">
+               <div>
+                   <p onclick="shopNavbarFunc()" class="shop1" >Shop</p>
+               <p onclick="learnNavbarFunc()">Learn</p>
+               <p onclick="searchNavbarFunc()">Search</p>
+               </div>
+               <div  class="closesidebar">
+                   <p onclick="closeFunc()">&times;</p>
+               </div>
+           </div>
+   
+        <div id="part1">
+           <p><a href="bestseller.html">trending</a></p>
+           <h2><a href="bestseller.html">NEW</a></h2>
+           <h2><a href="bestseller.html">BESTSELLERS</a></h2>
+           <h2><a href="bestseller.html">VIRTUAL SERVICES</a></h2>
+           <h2>SPECIAL OFFERS</h2>
+        </div>
+   
+        <div id="part2">
+           <p>shopby</p>
+           <h2>MAKEUP</h2>
+           <h2>SKINCARE</h2>
+           <h2>MINI BAR</h2>
+           <h2>GIFTS & SETS</h2>
+        </div>
+   
+        <div id="footer">
+           <p>Join BB Access and earn points</p>
+           <p> Find a store</p>
+        </div>
+       </div> 
+       <!-- shopnav sidebar part ends -->
+   
+         <!-- learnNavbar sidebar start -->
+         <div id="learnNavbar" class="sidebar">
+        
+           <div id="header">
+               <div>
+                   <p onclick="shopNavbarFunc()">Shop</p>
+               <p onclick="learnNavbarFunc()" class="learn1">Learn</p>
+               <p onclick="searchNavbarFunc()">Search</p>
+               </div>
+               <div  class="closesidebar">
+                   <p onclick="closeFunc()">&times;</p>
+               </div>
+           </div>
+   
+        <div id="part1">
+           <p>Always-On Artistry</p>
+          <h2>OUR ARTISTS</h2>
+          <h2>VIRTUAL SERVICES</h2>
+          <h2>HOW TO VIDEOS</h2>
+        </div>
+   
+        <div id="part2">
+           <p>Our Brand</p>
+           <h2>INGREDIENTS</h2>
+           <h2>SUSTAINABILITY</h2>
+           <h2>PRETTY POWERFUL FUND</h2>
+           <h2>CARBON NEUTRAL SHIPPING</h2>
+           <h2>OUR STORY</h2>
+        </div>
+   
+        <div id="footer">
+           <p>Join BB Access and earn points</p>
+           <p> Find a store</p>
+        </div>
+       </div> 
+       <!-- learnnav sidebar part ends -->
+   
+        <!-- searchNavbar sidebar start -->
+        <div id="searchNavbar" class="sidebar">
+        
+           <div id="header">
+               <div>
+                   <p onclick="shopNavbarFunc()" >Shop</p>
+               <p onclick="learnNavbarFunc()">Learn</p>
+               <p onclick="searchNavbarFunc()" class="search1">Search</p>
+               </div>
+               <div  class="closesidebar">
+                   <p onclick="closeFunc()">&times;</p>
+               </div>
+           </div>
+   
+        <div id="part1">
+           <input type="text" placeholder="Search" id="searchbar">
+           <p>suggested searches</p>
+          <h3>Foundation</h3>
+          <h3>Face wash</h3>
+          <h3>Offers</h3>
+        </div>
+   
+        
+   
+        <div id="footer">
+           <p>Join BB Access and earn points</p>
+           <p> Find a store</p>
+        </div>
+       </div> 
+       <!-- learnnav sidebar part ends -->
+       <script>
+           function closeFunc(){
+               document.getElementById("shopNavbar").style.width="0px"
+               document.getElementById("learnNavbar").style.width="0px"
+               document.getElementById("searchNavbar").style.width="0px"
+           }
+       </script>
+   
+       <!-- the navbar and Header part start -->
+       <div id="navbar">
+           <div>
+                <!-- shopNavbar java script start -->
+               <p onclick="shopNavbarFunc()" >Shop</p>
+               <script>
+                 function shopNavbarFunc(){
+                   document.getElementById("shopNavbar").style.width="0px"
+               document.getElementById("learnNavbar").style.width="0px"
+               document.getElementById("searchNavbar").style.width="0px"
+                   document.getElementById("shopNavbar").style.width= "26%";
+                   var shop1=document.querySelector(".shop1");
+                   shop1.style.color="white";
+                   shop1.style.textDecoration="underline";
+                   shop1.style.textDecorationColor="white";
+                 }
+               </script>
+               <!-- shopNavbar java script ends -->
+   
+               <!-- learnNavbar java script start -->
+               <p onclick="learnNavbarFunc()">Learn</p>
+                <script>
+                    function learnNavbarFunc(){
+                       document.getElementById("shopNavbar").style.width="0px"
+               document.getElementById("learnNavbar").style.width="0px"
+               document.getElementById("searchNavbar").style.width="0px"
+                   document.getElementById("learnNavbar").style.width= "26%";
+                   var shop1=document.querySelector(".learn1");
+                   shop1.style.color="white";
+                   shop1.style.textDecoration="underline";
+                   shop1.style.textDecorationColor="white";
+                 }
+                </script>
+                <!-- learnNavbar java script ends -->
+   
+                <!-- searchnavbar java script starts -->
+               <p onclick="searchNavbarFunc()">Search</p>
+               <script>
+                   function searchNavbarFunc(){
+                       document.getElementById("shopNavbar").style.width="0px"
+               document.getElementById("learnNavbar").style.width="0px"
+               document.getElementById("searchNavbar").style.width="0px"
+                  document.getElementById("searchNavbar").style.width= "45%";
+                  var shop1=document.querySelector(".search1");
+                   shop1.style.color="white";
+                   shop1.style.textDecoration="underline";
+                   shop1.style.textDecorationColor="white";
+                }
+               </script>
+               <!-- searchNavbar java script ends -->
+           </div>
+           <div>
+               <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRZIWO620BRJ_VmMzFmROFr-DXne8kuJkAAtzTEzLi-na36_bAZj1_FTGkq_ycvJTUfsw&usqp=CAU" alt="logo">
+           </div>
+           <div>
+               <p><a href="index.html">EmailSign Up</a></p>
+               <!-- <div id="signinnavbar">
+                   <p>Login</p>
+                   <form id="form">
+                       <input type="text" placeholder="*email Address" id="email">
+                       <input type="text" placeholder="*password" id="password">
+                       <p><u>forget your password?</u></p>
+                       <input type= "submit" id="sub" value="LOG IN">
+                   </form>
+                   <hr>
+                   <div id="reg">
+                       <p>Don't have an account?</p>
+                       <a href="index.html">
+                           <button>REGISTER</button>
+                       </a>
+                   </div>
+               </div> -->
+               <p id="signinNavbar"><a href="signin.html">Sign in</a></p>
+               <p><a href="bag.html">Bag (0)</a></p>
+           </div>
+       </div>
+       <!-- <script>
+           document.querySelector("#container").addEventListener("click",closeFunc);
+       </script> -->
+   
+      </div>
+
+      <!-- navbar part ends -->
+   
+
+    <div id="container">
+        <div id="home1">
+           <img src="https://logos-download.com/wp-content/uploads/2016/05/Bobbi_Brown_logo_logotype.png" alt="logo">
+        </div>
+
+        <div id="home2">
+            <div>
+                <p>SUMMER STOCK-UP EVENT</p>
+            <h1>25% OFF <br> EVERYTHING</h1>
+            <p>Get more of what you love for less. Plus, create a 3-piece Summer Travel Set when you spend $75+.</p>
+            <button id="home2btn">Shop Now</button>
+            </div>
+        </div>
+
+        <div id="home3">
+            <h1>GOTTA HAVE IT</h1>
+            <div class="home3pages">
+                <div>TRENDING NOW</div>
+                <div>NEW</div>
+                <div>SKIN CARE</div>
+            </div>
+            <!-- trending product part starts -->
+            <div id="trending">
+                <div>
+                   <div class="trending1"><img src="https://www.bobbibrowncosmetics.com/media/export/cms/products/v2_1080x1080/bb_sku_E96E51_1080x1080_0.jpg" alt="img1"> </div>
+                    <p>Moonstone New</p>
+                    <h3>Long-wear Cream Shadow Stick</h3>
+                    <p>Our ultimate quick eye shadow</p>
+                    <p>$30.00</p>
+                    <button>Add to Bag</button>
+                </div>
+                <div>
+                    <div class="trending1"><img src="https://www.bobbibrowncosmetics.com/media/export/cms/products/v2_1080x1080/bb_sku_EMCK07_1080x1080_0.jpg" alt="img1"> </div>
+                    <p>Force of Nature</p>
+                    <h3>Crushed Oil-infused Gloss</h3>
+                    <p>Hydrating, non-sticky lip gloss</p>
+                    <p>$29.00</p>
+                    <button>Add to Bag</button>
+                </div>
+                <div>
+                    <div class="trending1"><img src="https://www.bobbibrowncosmetics.com/media/export/cms/products/v2_1080x1080/bb_sku_ERMP01_1080x1080_0.jpg" alt="img1"> </div>
+                    <p>Bare Lip</p>
+                    <h3>Extra Lip Tint</h3>
+                    <p>Color-Enhansing lip Balm</p>
+                    <p>$34.00</p>
+                    <button>Add to Bag</button>
+                </div>
+            </div>
+            <!-- trending product part ends -->
+        </div>
+
+        <div id="home4">
+            <h1>SHADOW PLAY</h1>
+           <p>Play up your smokey eye with shimmering shadow that catches the light</p>
+            <!-- SHADOWPLAY product part starts -->
+            <div id="shadowplay">
+                <div>
+                   <div class="shadow1"><img src="https://www.bobbibrowncosmetics.com/media/export/cms/HP_Modules/SS22/SS22_SpringSmokeyEye_pc_1.jpg" alt="img1"> </div>
+                    <h3>SHIMMER ON</h3>
+                    <p>Swipe on <span>Long-Wear Cream Shadow in Cinnamon, Golden Pink</span>, and <span>Bark </span>for dimensional shimmer.</p>
+                    <button>Shop Now</button>
+                </div>
+                <div>
+                    <div class="shadow1"><img src="https://www.bobbibrowncosmetics.com/media/export/cms/HP_Modules/SS22/SS22_SpringSmokeyEye_pc_2.jpg" alt="img1"> </div>
+                    <h3>LINE IT OUT</h3>
+                    <p>Line eyes with<span>Long-Wear Gel Eyeliner in Black Ink </span>to turn up the smoke.</p>
+                    <button>Shop Now</button>
+                </div>
+                <div>
+                    <div class="shadow1"><img src="https://www.bobbibrowncosmetics.com/media/export/cms/HP_Modules/SS22/SS22_SpringSmokeyEye_pc_3.jpg" alt="img1"> </div>
+                    <h3>VOLUMIZE LASHES</h3>
+                    <p>Coat lashes with <span>Smokey Eye Mascara</span> for drama and volume.</p>
+                    <button>Shop Now</button>
+                </div>
+            </div>
+            <!-- shadowplay product part ends -->
+        </div>
+            
+             <!-- pretty part starts -->
+        <div id="home4">
+            <h1>PRETTY POWERFUL AND PROUD</h1>
+           <p>This Pride Month, we’re spotlighting friends in the LGBTQIA+ community who embody what it means to be Pretty Powerful and proud.</p>
+           <button>Discover Our Pretty Powerful Fund</button>
+            <!-- pretty product part starts -->
+            <div id="pretty">
+                <div>
+                   <div class="shadow1"><img src="https://www.bobbibrowncosmetics.com/media/export/cms/HP_Modules/SS22/SS22_PrettyPowerful_PRIDE_1.jpg" alt="img1"> </div>
+                    <h3>MARC REAGAN</h3>
+                    <h3>Executive Director od Bobbi Brown Global Artistry & Consumer Experience</h3>
+                    <p>"The beauty of being proud is loving yourself from the inside out."</p>
+                </div>
+                <div>
+                    <div class="shadow1"><img src="https://www.bobbibrowncosmetics.com/media/export/cms/HP_Modules/SS22/SS22_PrettyPowerful_PRIDE_2.jpg" alt="img1"> </div>
+                     <h3>EMIRA D'SPAIN</h3>
+                     <h3>Beauty Content Creator</h3>
+                     <p>"The beauty of being proud is knowing I have a community of people who uplift, support, and embrace me with open arms."</p>
+                 </div>
+                 <div>
+                    <div class="shadow1"><img src="https://www.bobbibrowncosmetics.com/media/export/cms/HP_Modules/SS22/SS22_PrettyPowerful_PRIDE_3.jpg" alt="img1"> </div>
+                     <h3>CHAR ELLESSE</h3>
+                     <h3>Founder and Director of Girls will Be Boys</h3>
+                     <p>"The beauty of being proud is community."</p>
+                 </div>
+                 <div>
+                    <div class="shadow1"><img src="https://www.bobbibrowncosmetics.com/media/export/cms/HP_Modules/SS22/SS22_PrettyPowerful_PRIDE_4.jpg" alt="img1"> </div>
+                     <h3>DAVID LOPEZ</h3>
+                     <h3>Beauty Content Creator/h3>
+                     <p>"The beauty of being proud is that you givr others the autonomy to be proud of who they are."</p>
+                 </div>
+            </div>
+            <!-- pretty product part ends -->
+
+               <!-- minimalist part starts -->
+            <div id="home5">
+                <div>
+                    <img src="https://www.bobbibrowncosmetics.com/media/export/cms/HP_Modules/SS22/SS22_Minimalist_Clean_Look_pc.jpg" alt="img2">
+                </div>
+                <div>
+                    <p>LIVE FROM L.A., IT'S NIKKI</p>
+                <h1>MINIMALIST CLEAN LOOK</h1>
+                <p>Watch how Artist in Residence Nikki DeRoest creates a Minimalist Clean Look using effortless, glow-boosting essentials.</p>
+                 <button>WATCH NOW</button>
+                <button>SHOP NOW</button>
+                </div>
+            </div>
+             <!-- minimalist part starts -->
+
+             <!-- refresh kit part starts -->
+           <div id="home6">  
+                <h1>REFRESH DAD'S KIT</h1>
+                <p>Dad deserves good skin, too. Refresh his stash for Father’s Day with our easy-to-use essentials.</p>
+                <button>SHOP SKINCARE</button>
+                <div>
+                    <img src="https://www.bobbibrowncosmetics.com/media/export/cms/HP_Modules/SS22/SS22_FathersDay_pc.jpg" alt="img3">
+                </div>
+
+                <h1>MADE TO LAST</h1>
+                <p>Meet our summer lineup of lightweight, long-wearing formulas for a polished look that lasts.</p>
+                <div>
+                    <img src="https://www.bobbibrowncosmetics.com/media/export/cms/HP_Modules/SS22/SS22_SummerSolstice_pc.jpg" alt="img4">
+                </div>
+            </div>
+
+            <div id="home7">
+                <h1>#BOBBIBROWN COMMUNITY</h1>
+               <p>Looking fresh-faced? Let's see it. Mention <span>@bobbibrown</span> to share.</p>
+    
+                <!-- community part starts -->
+                <div id="community">
+                    <div>
+                       <div class="shadow2"><img src="https://www.bobbibrowncosmetics.com/media/export/cms/HP_Modules/SS22/SS22_PrettyPowerful_PRIDE_1.jpg" alt="img1"> </div>
+                        <h3>MARC REAGAN</h3>
+                        <h3>Executive Director od Bobbi Brown Global Artistry & Consumer Experience</h3>
+                        <p>"The beauty of being proud is loving yourself from the inside out."</p>
+                    </div>
+                    <div>
+                        <div class="shadow2"><img src="https://www.bobbibrowncosmetics.com/media/export/cms/HP_Modules/SS22/SS22_PrettyPowerful_PRIDE_2.jpg" alt="img1"> </div>
+                         <h3>EMIRA D'SPAIN</h3>
+                         <h3>Beauty Content Creator</h3>
+                         <p>"The beauty of being proud is knowing I have a community of people who uplift, support, and embrace me with open arms."</p>
+                     </div>
+                     <div>
+                        <div class="shadow2"><img src="https://www.bobbibrowncosmetics.com/media/export/cms/HP_Modules/SS22/SS22_PrettyPowerful_PRIDE_3.jpg" alt="img1"> </div>
+                         <h3>CHAR ELLESSE</h3>
+                         <h3>Founder and Director of Girls will Be Boys</h3>
+                         <p>"The beauty of being proud is community."</p>
+                     </div>
+                     <div>
+                        <div class="shadow2"><img src="https://www.bobbibrowncosmetics.com/media/export/cms/HP_Modules/SS22/SS22_PrettyPowerful_PRIDE_4.jpg" alt="img1"> </div>
+                         <h3>DAVID LOPEZ</h3>
+                         <h3>Beauty Content Creator/h3>
+                         <p>"The beauty of being proud is that you givr others the autonomy to be proud of who they are."</p>
+                     </div>
+                </div>
+            </div>
+    </div>
+</body>
+<script src="homepage.js"></script>
+ <!-- footer part -->
+
+ <div id="fullfooter">
+
+    <div id="footerpart1">
+        <div>
+            <h3>NEED HELP?</h3>
+            <P>Chat with an Artist</P>
+            <p>
+                Text an Artist
+            </p>
+            <p>
+                Call Us (877)-310-9222
+            </p>
+            <p>
+                Shipping & Returns
+            </p>
+            <p>
+                FAQS
+            </p>
+            <p>
+                Careers
+            </p>
+            <input type="text" placeholder="CHOOSE LOCATION">
+        </div>
+        <div>
+            <h3>MY BOBBI BROWN</h3>
+            <p>
+                BB Access
+            </p>
+            <p>
+                My Account
+            </p>
+            <p>My Orders</p>
+            <p>Store Locator</p>
+        </div>
+        <div>
+            <input type="text"placeholder="ENTER YOUR EMAIL"><input type="text"placeholder="ENTER YOUR MOBILE PHONE">
+            <button>SUBMIT</button>
+            <div id="social">
+                <div><a href="https://www.facebook.com/" target="_blank"><i
+                            class="fa-brands fa-facebook"></i></a></i></div>
+                <div><a href="https://twitter.com/i/flow/login" target="_blank"><i
+                            class="fa-brands fa-twitter"></i></a></div>
+                <div><a href="https://www.instagram.com/?hl=en" target="_blank"><i
+                            class="fa-brands fa-instagram-square"></i></a></div>
+                <div><a href="https://www.youtube.com/" target="_blank"><i class="fa-brands fa-youtube"></i></a>
+                </div>
+                <div><a href="https://in.pinterest.com/" target="_blank"><i class="fa-brands fa-pinterest"></i></a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="footerpart2">
+        <div>
+            © Bobbi Brown Professional Cosmetics, Inc. All worldwide rights reserved.
+        </div>
+        <div>
+            <p>Terms & conditions</p>
+            <p>California Do Not Sell My Personal Information</p>
+            <p>Accessibillity</p>
+        </div>
+        <div>
+            <p>Interest Based Ads</p>
+            <p>Privacy Policy</p>
+        </div>
+    </div>
+
+   </div>
+</html>

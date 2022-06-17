@@ -1,0 +1,209 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bobbi brown/bag</title>
+    <style>
+        * {
+            margin: 0px;
+            padding: 0px;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        #bag {
+            width: 65%;
+            padding: 10%;
+            display: grid;
+            grid-template-columns: 63% 35%;
+            gap: 3%;
+            margin: auto;
+        }
+        img {
+            width: 100%;
+            height: 100px;
+        }
+        #bag1 h2 {
+            font-weight: 600;
+            margin: 2%;
+        }
+        #bag1 h3 {
+            background-color: rgba(128, 128, 128, 0.233);
+            margin-bottom: 2%;
+            
+            font-weight: 500;
+            padding: 3%;
+            font-size: 15px;
+        }
+        #bag1 p {
+            margin-top: 20px;
+            margin-bottom: 20px;
+        }
+        #bag1>div:nth-child(1){
+            border-bottom: 2px solid black;
+        }
+        table {
+            width: 95%;
+           
+        }
+        th {
+            border-bottom: 1px solid black;
+            font-weight: 500;
+            padding-bottom: 10px;
+        }
+        #bag2 {
+            background-color: rgba(128, 128, 128, 0.188);
+            padding: 5%;
+        }
+        #bag2 input {
+            width: 95%;
+           padding-left: 20px;
+            height: 37px;
+            margin-bottom: 20px;
+        }
+      button {
+        width: 95%;
+        height: 35px;
+        background-color: white;
+        padding-top: 5px;
+        margin-bottom: 25px;
+        border-color: rgba(0, 0, 0, 0.664);
+      }
+      button>img {
+        width: 25%;
+        height: 25px
+      }
+     #bag2 #btn1 {
+        height: 58px;
+        background-color: black;
+        color: white;
+        font-weight: 600;
+        font-size: 16px;
+        margin-top:-12px;
+      }
+      #bag2>div:nth-child(1) {
+        border-bottom: 1px solid black;
+        margin-bottom: 20px;
+        padding-bottom: 10px;
+      }
+      #btn2 {
+         width: 30%;
+         color: white;
+         background-color: black;
+         margin-top: 7px;
+      }
+      #btn2+div {
+       font-size: 14px;
+        border-bottom: 1px solid black;
+        text-align: center;
+        border-top: 1px solid black;
+        padding-bottom: 10px;
+        padding-top: 12px;
+      }
+    </style>
+</head>
+<body>
+    <div id="bag">
+        <div id="bag1">
+           <div>
+            <img src="https://www.bobbibrowncosmetics.com/media/export/cms/offers/BB_Checkout_Offer_JuneTier_581x99.jpg" alt="img1">
+            <h2>SHOPPING BAG</h2>
+           </div>
+           <div>
+            <h3>Enjoy Free Standard Shipping on any $65+ order.</h3>
+            <p>
+                Please add $52.50 or more to qualify to Create your 3-piece set. Ends 6/19/22 at 11:59pm PT, or while supplies last. Please note out of stock
+                 items are excluded from meeting the minimum purchase requirement.
+            </p>
+           </div>
+
+           <table>
+            <thead>
+                <tr>
+                    <th>
+                        PRODUCT
+                    </th>
+                    <th>
+                        
+                    </th>
+                    <th>
+                        QUANTITY
+                    </th>
+                    <th>PRICE</th>
+                    <th>TOTAL</th>
+
+                </tr>
+            </thead>
+            <tbody>
+                  
+              
+            </tbody>
+            <div id="subtotal"></div>
+           </table>
+        </div>
+
+        <div id="bag2">
+           <div>
+            <button>
+                <img src="data:image/png;base64,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" alt="">
+            </button>
+
+            <button id="btn1">
+                Checkout
+            </button>
+
+            <h2>OFFER CODE</h2>
+           </div>
+           <div>
+            <input type="text" placeholder="Offer Code" id="offercode">
+            <p>one offer code per order</p>
+
+            <button id="btn2">APPLY</button>
+
+            <div>
+                Join BB Access <br> and earn 23 points with your purchase today.
+            </div>
+           </div>
+        </div>
+    </div>
+</body>
+<script>
+    var array1 = JSON.parse(localStorage.getItem("product_array"));
+    console.log(array1)
+     array1.forEach(el => {
+        var tr = document.createElement("tr");
+        var td0 = document.createElement("td");
+        var img = document.createElement("img");
+        img.src=el.product_img;
+        td0.append(img);
+        var td1 = document.createElement("td");
+        td1.innerText=el.product_name;
+        var td2= document.createElement("td");
+        var qty = 1;
+        td2.innerText= qty;
+        var td3= document.createElement("td");
+        td3.innerText=el.product_price;
+        var k ="";
+        for(var a=1; a<el.product_price.length; a++){
+            k=k+el.product_price[a];
+        }
+        k= +(k);
+        k= k * qty;
+        var tr1= document.createElement("tr");
+        var td4 = document.createElement("td");
+        td4.innerText= k;
+         tr1.innerText="Remove";
+        tr.append(td0,td1,td2,td3);
+        document.querySelector("tbody").append(tr,tr1)
+        var z = 0;
+          z = k+z;
+});
+var div1 = document.createElement("div");
+      div1.innerText="SUBTOTAL"
+   var div2 = document.createElement("div");
+      div2.innerText=z;
+      document.getElementById("subtotal").append(div1,div2)
+
+</script>
+</html>
